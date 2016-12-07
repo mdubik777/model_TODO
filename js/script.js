@@ -87,7 +87,7 @@ $(document).ready(function() {
 
     function getUsersJson() {
         $.ajax({
-            url: 'http://localhost:63342/popup/json/users.json',
+            url: '/json/users.json',
             dataType: 'json',
             success: function(data) {
                 app.users =  data;
