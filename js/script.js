@@ -87,7 +87,7 @@ $(document).ready(function() {
 
     function getUsersJson() {
         $.ajax({
-            url: '/json/users.json',
+            url: 'json/users.json',
             dataType: 'json',
             success: function(data) {
                 app.users =  data;
