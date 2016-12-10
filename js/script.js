@@ -87,7 +87,7 @@ $(document).ready(function() {
 
     function getUsersJson() {
         $.ajax({
-            url: 'json/users.json',
+            url: ' json/users.json',
             dataType: 'json',
             success: function(data) {
                 app.users =  data;
@@ -477,12 +477,13 @@ $(document).ready(function() {
                     }
 
                 }
-            localStorage.clear();
-            localStorage.setItem('users', JSON.stringify(app.users));
 
             app.dom.deleteAllBtn.attr('disabled', 'disabled');
             app.dom.checkboxAll.removeAttr('checked');
         }
+        localStorage.clear();
+        localStorage.setItem('users', JSON.stringify(app.users));
+
 
     });
 
