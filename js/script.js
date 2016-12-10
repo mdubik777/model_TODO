@@ -91,14 +91,10 @@ $(document).ready(function() {
             dataType: 'json',
             success: function(data) {
                 app.users =  data;
-
                 localStorage.setItem('users', JSON.stringify(data));
                 renderAllUsers(data);
             }
-        }).success(function() {
-
-            })
-
+        })
     }
 
 
@@ -114,8 +110,6 @@ $(document).ready(function() {
             localStorage.setItem('users', JSON.stringify(users))
         }
     }
-
-
 
     var browserHeight = $(document).height();
 
@@ -200,7 +194,6 @@ $(document).ready(function() {
             male: gender,
             country: country
         }
-
     }
 
     function renderUser(_user, withWrapper) {
@@ -292,10 +285,6 @@ $(document).ready(function() {
             app.dom.popup.fadeIn(600);
         }
 
-
-
-
-
     app.dom.overlay.on("click", function(e){
         var popupClick =  $(e.target).closest('#popup-box');
 
@@ -306,8 +295,6 @@ $(document).ready(function() {
         }
 
     });
-
-
 
     app.dom.closePopupBtn.on('click',function() {
         closePopup();
